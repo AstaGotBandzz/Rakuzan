@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client
-const prefix = 'R!';
+const prefix = 'S!';
 const fs = require('fs')
 
 const memberCounter = require('./counters/counter');
@@ -18,7 +18,7 @@ for(const file of commandFiles){
 
 client.once('ready', () => {
     console.log('Seijoh is now alive!');
-    client.user.setActivity({ type: "PLAYING", name: " Prefix = R! || All Hail Rakuzan || 6,000 Members || 50 Boosts" });
+    client.user.setActivity({ type: "PLAYING", name: " Prefix = S! || All Hail Seijoh" });
     memberCounter(client);
 });
 
