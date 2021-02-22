@@ -18,7 +18,7 @@ for(const file of commandFiles){
 
 client.once('ready', () => {
     console.log('Seijoh is now alive!');
-    client.user.setActivity({ type: "PLAYING", name: "R! | Watching Over Rakuzan | Asta Is A Goat" });
+    client.user.setActivity({ type: "PLAYING", name: " Prefix = R! || All Hail Rakuzan || 6,000 Members || 50 Boosts" });
     memberCounter(client);
 });
 
