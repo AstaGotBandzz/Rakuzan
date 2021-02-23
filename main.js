@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client
-const prefix = 'S!';
+const prefix = 'T!';
 const fs = require('fs')
 
 const memberCounter = require('./counters/counter');
@@ -18,21 +18,21 @@ for(const file of commandFiles){
 
 client.once('ready', () => {
     console.log('Seijoh is now alive!');
-    client.user.setActivity({ type: "PLAYING", name: " Prefix = S! || All Hail Seijoh" });
+    client.user.setActivity({ type: "PLAYING", name: " Prefix = T!" });
     memberCounter(client);
 });
 
 client.on('guildMemberAdd', guildMember => {
-    let welcomeRole = guildMember.guild.roles.cache.find(role => role.name === 'Regular Goons');
+    let welcomeRole = guildMember.guild.roles.cache.find(role => role.name === 'Customers');
 
     guildMember.roles.add(welcomeRole);
     
     let embed = new Discord.MessageEmbed()
-    .setDescription('Welcome To **Seijoh** Check out Server Info and Rules chat to get familliar with the server!')
+    .setDescription('Welcome To **The Tavern!** Check out Server Info and Rules chat to get familliar with the server!')
     .setColor('#ff3067')
     .setAuthor(`${guildMember.user.tag} Has Joined!`, guildMember.user.displayAvatarURL,)
     .addField('Total Members', guildMember.guild.memberCount, true)
-    .setImage('https://cdn.discordapp.com/attachments/813561092147511326/813563145557377024/unknown.png')
+    .setImage('https://cdn.discordapp.com/attachments/758412588395790357/813683113632202752/Tavern_Welcome.gif')
 
     guildMember.guild.channels.cache.get('813561078960095262').send(embed);
 });
