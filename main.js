@@ -28,13 +28,13 @@ client.on('guildMemberAdd', guildMember => {
     guildMember.roles.add(welcomeRole);
     
     let embed = new Discord.MessageEmbed()
-    .setDescription('Welcome To **Rakuzan** Check out Server Info and Rules chat to get familliar with the server!')
+    .setDescription('Welcome To **Seijoh** Check out Server Info and Rules chat to get familliar with the server!')
     .setColor('#ff3067')
     .setAuthor(`${guildMember.user.tag} Has Joined!`, guildMember.user.displayAvatarURL,)
     .addField('Total Members', guildMember.guild.memberCount, true)
-    .setImage('https://media.discordapp.net/attachments/812532936267268146/813180708738301982/giphy_31.gif')
+    .setImage('https://cdn.discordapp.com/attachments/813561092147511326/813563145557377024/unknown.png')
 
-    guildMember.guild.channels.cache.get('811602307652780073').send(embed);
+    guildMember.guild.channels.cache.get('813561078960095262').send(embed);
 });
 
 
